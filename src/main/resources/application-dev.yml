@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ferreteria
+  datasource:
+    url: jdbc:mysql://localhost:3306/ferreteria?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: tu_password_local
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+jwt:
+  secret: ferreteria-clave-secreta-de-desarrollo-2026-cambiar
+  expiration-ms: 3600000
